@@ -1,11 +1,21 @@
-console.log('Hello Webpack!')
+const name = 'Mateusz'
+const lastName = 'Choma'
+const carPropName = 'myCar'
 
-class Greeter {
-
-    constructor() {
-        throw new Error()
-    }
-
+const obj = {
+    // shorthand properties
+    name,
+    lastName,
+    // methods
+    sayHello() {
+        console.log('Hello ' + this.name + ' ' + this.lastName)
+    },
+    // computed properties
+    [carPropName]: {
+        brand: 'Opel',
+    },
 }
 
-const greeter1 = new Greeter()
+console.log(obj)
+
+obj.sayHello()
